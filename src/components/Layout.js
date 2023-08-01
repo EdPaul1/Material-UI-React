@@ -6,12 +6,20 @@ import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
-import { AddCircleOutlineOutlined, SubjectOutlined } from '@material-ui/icons'
+import { AddCircleOutlineOutlined, SubjectOutlined} from '@material-ui/icons'
 import { useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom.min'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import { format } from 'date-fns'
 import Avatar from '@material-ui/core/Avatar'
+import DashboardIcon from '@material-ui/icons/Dashboard'
+import AccountCircleIcon from '@material-ui/icons/AccountCircle'
+import SearchIcon from '@material-ui/icons/Search'
+import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline'
+import NotificationsIcon from '@material-ui/icons/Notifications'
+import LandscapeIcon from '@material-ui/icons/Landscape'
+import AssessmentIcon from '@material-ui/icons/Assessment'
+import CreditCardIcon from '@material-ui/icons/CreditCard';
 
 const drawerWidth = 240
 const useStyles = makeStyles((theme) => {
@@ -59,14 +67,49 @@ export default function Layout({ children }) {
 
     const menuItems = [
         {
-            text: 'My Notes',
+            text: 'Dashboard',
+            icon: <DashboardIcon color='secondary' />,
+            path: '/'
+        },
+        {
+            text: 'Profile Management',
+            icon: <AccountCircleIcon color='secondary' />,
+            path: '/create'
+        },
+        {
+            text: 'Project Search',
+            icon: <SearchIcon color='secondary' />,
+            path: '/'
+        },
+        {
+            text: 'Communication Channels',
+            icon: <ChatBubbleOutlineIcon color='secondary' />,
+            path: '/'
+        },
+        {
+            text: 'Portfolio View',
+            icon: <AssessmentIcon color='secondary' />,
+            path: '/'
+        },
+        {
+            text: 'Finance Transactions',
+            icon: <CreditCardIcon color='secondary' />,
+            path: '/'
+        },
+        {
+            text: 'Investment Reports',
             icon: <SubjectOutlined color='secondary' />,
             path: '/'
         },
         {
-            text: 'Create Note',
-            icon: <AddCircleOutlineOutlined color='secondary' />,
-            path: '/create'
+            text: 'Land Leasing',
+            icon: <LandscapeIcon color='secondary' />,
+            path: '/'
+        },
+        {
+            text: 'Notifications',
+            icon: <NotificationsIcon color='secondary' />,
+            path: '/'
         }
     ]
 
