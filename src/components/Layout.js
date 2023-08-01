@@ -21,6 +21,9 @@ import LandscapeIcon from '@material-ui/icons/Landscape'
 import AssessmentIcon from '@material-ui/icons/Assessment'
 import CreditCardIcon from '@material-ui/icons/CreditCard';
 
+//change to tustock green #0F633D
+//tustock orange #F36B23
+
 const drawerWidth = 240
 const useStyles = makeStyles((theme) => {
     return {
@@ -122,10 +125,10 @@ export default function Layout({ children }) {
             >
                 <Toolbar>
                     <Typography className={classes.date}>
-                        Today is the { format(new Date(), 'do MMMM Y') }
+                        Dashboard
                     </Typography>
                     <Typography>
-                        Mario
+                        #Logged in user
                     </Typography>
                     <Avatar src="/mario-av.png" className={classes.avatar}/>
                 </Toolbar>
@@ -140,7 +143,7 @@ export default function Layout({ children }) {
                 >
                 <div>
                     <Typography variant='h5' className={classes.title}>
-                        Ninja Notes
+                        #Tustock Logo
                     </Typography>
                 </div>
 
